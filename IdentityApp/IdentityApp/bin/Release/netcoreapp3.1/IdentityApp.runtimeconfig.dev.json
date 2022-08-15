@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\msahin.MAGICLICK\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\msahin.MAGICLICK\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ]
+  }
+}

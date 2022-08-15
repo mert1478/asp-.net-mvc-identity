@@ -1,0 +1,23 @@
+﻿@using IdentityApp.Areas.Identity
+@model List<CustomUser>
+@{
+    ViewData["Title"] = "UserRoleList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Users Role List</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>User</th>
+        <th>Get Role</th>
+    </tr>
+    @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.UserName</td>
+                    <td><a href="/AdminRole/AssignRole/@item.Id/" class="btn btn-outline-dark">Get Role</a></td>
+                </tr>
+            }
+</table>
+<a href="/AdminRole/Index/" class="btn btn-primary">Go Back to Rol List</a>

@@ -1,0 +1,48 @@
+﻿@using IdentityApp.Models;
+@model List<AspNetCustomers>
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<environment names="Development">
+    <link rel="stylesheet" href="~/css/magiclick.css" />
+</environment>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+        <div data-module="3">
+            <div class="home-content relative overflowx-hidden">
+                <div class="homepage-box homepage-row-1">
+                    <div data-module="">
+                        <div class="result-wrap works-wrap new-works border-works">
+                            <div class="row m-0" style="display: block;">
+                                @foreach (var item in Model)
+                                {
+                                    <div class="col-xs-12 col-sm-6 col-md-4 p-0 ">
+                                        <figure class="work-item big-box">
+                                            <a href="/Customer/Index/@item.Id">
+                                                <div class="img-wrap">
+                                                    <div class="mask">
+                                                        <picture>
+                                                            <img width="600" height="390" src="~/img/@item.Image" data-src="~/img/@item.Image" class="work-img lazyloaded">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <figcaption>
+                                                    <h2>@item.Name</h2>
+                                                    <h3>@item.Explanation</h3>
+                                                </figcaption>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                }
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>

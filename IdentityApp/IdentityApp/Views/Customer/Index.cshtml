@@ -1,0 +1,16 @@
+﻿@using IdentityApp.Models;
+@model AspNetCustomers 
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<p>
+    
+    <div>@Model.Explanation</div>
+    @if(User.IsInRole("Admin")) { 
+    <div>@Model.Data</div>
+    }
+
+</p>
